@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<style>
+    table,th,td {
+        border: 1px solid black;
+    }
+    body{
+        background-color: aqua;
+    }
+</style>
+
+    <h1>
+            <a href="/">Home</a>
+            <a href="/newdeveloper">New Developer</a>
+            <a href="/newtask">New Task</a>
+            <a href="/listtasks">List Tasks</a>
+            <a href="/deleteone">Delete One</a>
+            <a href="/delComplete">Delete Complete</a>
+            <a href="/insertmany">Insert Many</a>
+            <a href="/updatestate">Update State</a>
+    </h1>
+
+    <body>
+        <table id="tb01">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Level</th>
+                <th>Address</th>
+            </tr>
+            <% for(let i=0;i<mydata.length;i++){%>
+                <tr>
+                    <td>
+                        <%= mydata[i]._id %>
+                    </td>
+                    <td>
+                        <%= mydata[i].name.firstname %>
+                    </td>
+                    <td>
+                        <%= mydata[i].name.lastname %>
+                    </td>
+                    <td>
+                        <%= mydata[i].level %>
+                    </td>
+                    <td>
+                        <%= mydata[i].address %>
+                    </td>
+                </tr>
+            <%}%>
+        </table>
+
+    </body>
+</html>
